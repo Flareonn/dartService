@@ -122,6 +122,22 @@ p.description {
   color: #ffffff;
 }
 
+.ellipse {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #ffffff;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -436,6 +452,52 @@ p.description {
 
 .benefits-button > a:hover {
   color: #ffffff;
+}
+
+.stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.statistics {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 45px 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 25%;
+          flex: 1 0 25%;
+}
+
+.statistics > b {
+  margin-left: 23px;
+  color: #ffffff;
+}
+
+.statistics:first-child {
+  background-color: #80d8ff;
+}
+
+.statistics:nth-child(2) {
+  background-color: #82b1ff;
+}
+
+.statistics:nth-child(3) {
+  background-color: #b388ff;
+}
+
+.statistics:last-child {
+  background-color: #ea80fc;
 }
 
 /*
