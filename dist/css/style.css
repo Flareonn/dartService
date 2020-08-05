@@ -36,6 +36,10 @@ html {
 
 img {
   max-width: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 input, body, button {
@@ -489,6 +493,10 @@ p.description {
 
 .statistics__text {
   cursor: default;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   font-size: 20px;
   font-weight: 700;
   line-height: 25px;
