@@ -1,0 +1,43 @@
+.header
+ display: flex
+ flex: 1 0 30%
+ color: $c-normal
+ justify-content: space-between
+ align-items: center
+ padding: 50px 0px 165px 0px
+ // Меню навигации
+ &__nav>ul
+  display: flex
+  // позиционирование
+  &>li
+   display: flex
+   margin: 0 50px
+   &:nth-child(odd)
+    margin: 0
+   // стилизация ссылок
+   &>a
+    font-size: 15px
+    font-weight: 600
+    line-height: 25px
+    text-decoration: none
+ // Лого
+ &__logo
+  text-decoration: none
+  display: flex
+  align-items: center
+  &>img
+   margin-right: 10px
+  &>p
+   font-size: 15px
+   line-height: 17.5px
+   text-transform: uppercase
+  &:hover
+   color: $c-normal
+ // Кнопка входа
+ &__link
+  text-decoration: none
+  font-size: 14hpx
+  line-height: 25px
+  border-radius: 2px
+  border: 1px solid $c-normal
+  padding: 6px 20px

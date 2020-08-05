@@ -1,5 +1,5 @@
-$c-normal: #ff8261
-$c-active: #52cbf8
+$c-normal: #ffffff
+$c-active: #061e37
 
 ::-webkit-scrollbar-button
  background-image: url('')
@@ -31,13 +31,16 @@ html
 img
  max-width: 100%
 input,	body, button
- font-family: 'Open Sans', sans-serif
+ font-family: 'Raleway', sans-serif
 body
+ background-color: #061e37
+ background-image: linear-gradient(-53deg, #00b8d4 0%, #1de9b6 100%)
+ opacity: 0.9
  margin: 0
  padding: 0
  overflow-x: hidden
  min-height: 100%
-p,	h1,	h2,	h3,	h4,	h5
+p,	h1,	h2,	h3,	h4,	h5, ul
  margin: 0
  padding: 0
 fieldset
@@ -49,6 +52,14 @@ fieldset
  max-width: 1200px
  margin: 0px auto
  padding: 0px 15px
+a
+ color: $c-normal
+ transition: all .25s linear
+ &:hover
+  color: $c-active
+  transition: all .25s linear
+
+@import 'header'
 /*
 	Примеры вариаций названий блоков
 	@import 'interface'
