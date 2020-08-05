@@ -1,0 +1,63 @@
+$c-normal: #ff8261
+$c-active: #52cbf8
+
+::-webkit-scrollbar-button
+ background-image: url('')
+ background-repeat: no-repeat
+ width: 5px
+ height: 0px
+
+::-webkit-scrollbar-track
+ background-color: transparent
+
+::-webkit-scrollbar-thumb
+ -webkit-border-radius: 0px
+ border-radius: 0px
+ background-color: $c-normal
+
+::-webkit-scrollbar-thumb:hover
+ background-color: $c-active
+
+::-webkit-resizer
+ background-image: url('')
+ background-repeat: no-repeat
+ width: 5px
+ height: 0px
+
+::-webkit-scrollbar
+ width: 5px
+html
+ scroll-behavior: smooth
+img
+ max-width: 100%
+input,	body, button
+ font-family: 'Open Sans', sans-serif
+body
+ margin: 0
+ padding: 0
+ overflow-x: hidden
+ min-height: 100%
+p,	h1,	h2,	h3,	h4,	h5
+ margin: 0
+ padding: 0
+fieldset
+ margin: 0
+ border: none
+ padding: 0
+// Контейнер сайта
+.container
+ max-width: 1200px
+ margin: 0px auto
+ padding: 0px 15px
+/*
+	Примеры вариаций названий блоков
+	@import 'interface'
+	@import 'header'
+	@import 'main'
+	@import 'features'
+	@import 'production'
+	@import 'client'
+	@import 'feedback'
+	@import 'contacts'
+	@import 'popup'
+	@import 'media'*/
