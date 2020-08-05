@@ -1,0 +1,91 @@
+// Отступ секции
+.service
+ padding: 100px 0px
+
+// Стилизация заголовков
+.service-header
+ margin-bottom: 48px
+ display: flex
+ flex-direction: column
+ align-items: center
+ &>p
+  width: 50%
+  margin-top: 29px
+
+// Стилизация списка
+.service-list
+ list-style: none
+ width: calc( 50vw - 2.5px ) // Чтобы стоял всегда в центре
+ margin: 28px auto 0px auto // Центрирование + отступ сверху (28px)
+ &__item
+  margin-top: 20px // Элементы списка имеют отступ между собой
+
+// Стилизация изображения в выпадающем списке.
+.service__img
+ border-radius: 5px
+
+// Переменная отвечает за все отступы в списке
+$p-wrapper: 25px
+
+// Стилизация элемента
+.service-wrapper
+ position: relative // Для корректного отображения input:checkbox
+ box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1) // Тень для всего элемента
+ border-radius: 5px
+ &>label
+  color: $c-active // Весь текст в элементе принимает цвет
+  padding: $p-wrapper // Отступы внутренние
+  display: flex // Для позиционирования строк + иконок внутри элемента
+  flex-direction: column
+  cursor: pointer
+  &>input[type=checkbox] // Иконка
+   position: absolute
+   right: $p-wrapper
+   margin: 0
+   &+.service-dropper
+    display: none
+   &:checked+.service-dropper // Отображение при клике
+    display: flex
+  &>input[type=checkbox]:before // Кастомная иконка
+   position: absolute
+   background-color: #FFFFFF
+   height: 100%
+   width: 100%
+   font-family: FontAwesome
+   display: inline-block
+   content: "\f0d7"
+   font-size: 18px
+  &>input[type=checkbox]:checked:before // Кастомная иконка
+   font-family: FontAwesome
+   display: inline-block
+   content: "\f0d8"
+   letter-spacing: 5px
+
+// При клике на элемент откроется этот дроппер
+.service-dropper
+ padding-top: $p-wrapper // Отступ
+ align-items: center // Горизонтальное центрирование, чтобы не растягивалась картинка
+ &>.service-block // Внутр. блоки
+  &:first-child // Блок с картинкой
+   display: flex
+   flex: 1 0 30%
+   margin-right: 25px
+  &:last-child // Блок с текстом
+   padding: 8px 0
+   flex: 1 0 60%
+   max-height: 200px // При превышении кол-ва строк - будет скролл
+   overflow: scroll
+   &>p // Стили текста
+    font-size: 15px
+    line-height: 25px
+    letter-spacing: 0.45px
+
+// Стили текста
+.service-inner>i>span
+ font-family: Raleway
+ font-size: 15px
+ font-weight: 700
+ margin-left: 25px
+ text-transform: uppercase
+   
+ 
