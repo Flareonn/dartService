@@ -72,7 +72,7 @@ fieldset {
 
 .service, .benefits, .team {
   padding-top: 100px;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 a {
@@ -580,7 +580,7 @@ p.description {
 .service-list {
   list-style: none;
   width: calc( 50vw - 2.5px);
-  margin: 28px auto 0px auto;
+  margin: 28px auto 48px auto;
 }
 
 .service-list__item {
@@ -961,6 +961,11 @@ p.description {
   display: none;
 }
 
+.team-body__descr {
+  max-height: 200px;
+  overflow: hidden;
+}
+
 .team-body__wrapper {
   display: none;
 }
@@ -1203,7 +1208,7 @@ textarea.contacts-form__input {
   text-decoration: none;
 }
 
-.footer-inner__social > a:nth-child(odd) {
+.footer-inner__social > a:nth-child(even) {
   margin: 0px 20px;
 }
 
@@ -1242,6 +1247,9 @@ ul.footer-inner > li > a:hover {
 @media (max-width: 1200px) {
   .header {
     padding: 50px	0px;
+  }
+  .service-list {
+    width: calc(	75vw	-	3.75px);
   }
 }
 
