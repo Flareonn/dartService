@@ -1,0 +1,94 @@
+.contacts
+ background-color: #fafafa
+ padding: 50px 0px 100px 0px
+ &-header
+  display: flex
+  flex-direction: column
+  width: 50%
+  margin: 0 auto
+  &>p.description
+   margin-top: 30px
+   color: $c-active
+textarea.contacts-form__input
+ resize: none
+.contacts-form
+ display: flex
+ flex-direction: column
+ align-items: center
+ width: 50%
+ margin: 50px auto 0px auto
+ &__input
+  border-radius: 5px
+  padding: 20px
+  border: 1px solid $c-active
+  transition: all .25s linear
+  background-color: transparent
+  width: 100%
+  &::-webkit-input-placeholder
+   color: $c-active
+   font-family: 'Raleway', sans-serif
+   font-size: 14px
+   font-weight: 500
+   line-height: 30px
+  &:focus
+   transition: all .25s linear
+   border-color: #1de9b6
+   outline: none
+ &__block
+  display: flex
+  flex-wrap: wrap
+  width: 100%
+  align-items: center
+  &:nth-child(2)
+   margin: 20px 0px 
+  &:nth-child(3)
+   margin-bottom: 20px   
+ &__inner
+  display: flex
+  flex-basis: 50%
+  &:first-child
+   flex-basis: 47.5%
+   margin-right: 2.5%
+ &__label
+  color: $c-active
+  cursor: pointer
+  font-size: 15px
+  font-weight: 500
+ &__checkbox
+  margin: 0px 10px 0px 0px
+  cursor: pointer
+ &__wrapper
+  flex: 1
+  display: flex
+  align-items: center
+ &__submit
+  border: none
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15)
+  border-radius: 5px
+  background-color: #1de9b6
+  font-size: 16px
+  font-weight: 500
+  line-height: 30px
+  text-transform: uppercase
+  color: #ffffff
+  padding: 10px 42px
+  cursor: pointer
+		// background-color:	transparent
+		// border:	1px	solid	#d3e5eb
+		// transition:	.25s	all	linear
+		// flex-basis:	70%
+		// color:	#a0a9b6
+		// padding:	21px	25px
+		// flex-grow:	1
+		// &:focus	+	span
+		// 	display:	none
+		// &:valid	+	span
+		// 	display:	none
+		// &:hover	+	span
+		// 	transition:	.25s	all	linear
+		// 	color:	$c-active
+		// &:hover
+		// 	border-color:	$c-active
+		// 	transition:	.25s	all	linear
+		// &:focus
+		// 	outline:	none
