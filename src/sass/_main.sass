@@ -47,12 +47,13 @@
  &>.container
   display: flex
   align-items: center
+  flex-wrap: wrap
  &-block
   position: relative
+  flex: 1 0 44.5%
+  margin-right: 2.5%
   &:last-child
-   margin-left: 10%
    flex: 1 0 50%
-   margin-right: -15px
    position: relative
 .main__video
  color: $c-active
@@ -71,8 +72,6 @@
  align-items: center
  background-color: rgba(255, 255, 255, .9)
  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2)
- height: 324px
- width: 573px
  border-radius: 10px
  border: 1px solid
  &:hover > .icon-square
@@ -81,8 +80,8 @@
  &>span
   user-select: none
 .main__preview
- height: 100%
- margin-top: 3.5%
+ object-fit: cover
+ border-radius: 10px
 .main::after, .testimonials::after
  display: block
  position: absolute
