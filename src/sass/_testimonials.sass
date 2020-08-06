@@ -1,0 +1,119 @@
+.testimonials
+ >.container
+  height: 100%
+ &-grid
+  display: flex
+  align-items: center
+  height: 100%
+ &-block
+  &__header
+   margin-bottom: 78px
+  &__header>h2
+   margin-bottom: 20px
+   font-size: 45px
+   font-weight: 500
+  &__header>p
+   font-size: 15px
+   font-weight: 400
+   line-height: 25px
+  &__header>h2, &__header>p
+   color: #fff
+   text-align: left
+  &:first-child
+   flex: 1 0 40%
+   margin-right: 5%
+  &:last-child
+   flex: 1 0 55%
+   display: flex
+   height: 100%
+ &__button
+  text-transform: uppercase
+  text-decoration: none
+  padding: 22px 25px
+  background-color: $c-active
+  font-weight: 700
+  font-size: 15px
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15)
+  border-radius: 5px
+  &:hover
+   color: $c-normal
+
+
+// Слайдер
+.slider
+ display: flex
+ justify-content: space-around
+ flex-direction: column
+ position: relative
+ height: 100%
+ justify-content: stretch
+.slide
+ display: flex
+ align-items: center
+.slide__photo
+ flex: 1 0 10%
+ margin-right: 50px
+.slide__text
+ padding: 30px
+ background-color: #ffffff
+ box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15)
+ border-radius: 5px
+.slide__name
+ margin-bottom: 20px
+ color: $c-active
+ font-size: 18px
+ font-weight: 700
+ line-height: 25px
+.slide__comment
+ color: $c-sec
+ font-size: 15px
+ font-weight: 400
+ line-height: 25px
+ font-style: italic
+ max-height: 80px
+ overflow: hidden
+
+.slick-list
+ height: 100%!important
+ margin: 40px 0!important
+
+.slick-vertical .slick-slide, .slick-slider
+ display: flex!important
+ border: none!important
+
+.slick-slide
+ margin-bottom: 30px
+ margin-top: 30px
+ &:focus
+  outline: none
+
+.slick-dots
+ position: absolute
+ top: 0
+
+.slick-next, .slick-prev
+ background-color: transparent
+ border: none
+ font-size: 0
+ position: absolute
+ transform: translateX(-50%)
+ z-index: 9999
+ left: 50%
+ &::after
+  display: block
+  font-family: FontAwesome
+  font-size: 20px
+  color: white
+ &:hover
+  cursor: pointer
+ &:focus
+  outline: none
+
+.slick-next
+ bottom: 20px
+ &::after
+  content: '\f078'
+.slick-prev
+ top: 20px
+ &::after
+  content: '\f077'
