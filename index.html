@@ -11,6 +11,11 @@
    href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,700;0,800;1,400;1,600&display=swap"
    rel="stylesheet"
   />
+  <link
+   rel="stylesheet"
+   type="text/css"
+   href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+  />
   <script
    src="https://kit.fontawesome.com/5cc5538366.js"
    crossorigin="anonymous"
@@ -312,10 +317,91 @@
     </li>
    </ul>
   </div>
+  <div class="testimonials">
+   <div class="container">
+    <div class="testimonials-grid">
+     <div class="testimonials-block">
+      <div class="testimonials-block__header">
+       <h2 class="title">What our customers have to say about us</h2>
+       <p class="description">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna
+       </p>
+      </div>
+      <a href="#" class="testimonials__button">Get started</a>
+     </div>
+     <div class="testimonials-block">
+      <div class="slider">
+       <div class="slide">
+        <div class="slide__photo">
+         <img src="src/img/person1.png" alt="" />
+        </div>
+        <div class="slide__text">
+         <h5 class="slide__name">John Doe</h5>
+         <p class="slide__comment">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea Lorem ipsum dolor sit amet, consectetur adipisicing
+          elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+          aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+          laboris nisi ut aliquip ex ea Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+          ullamco laboris nisi ut aliquip ex ea Lorem ipsum dolor sit amet,
+          consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi ut aliquip ex ea Lorem ipsum dolor
+          sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea Lorem
+          ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+          ea Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea
+         </p>
+        </div>
+       </div>
+       <div class="slide">
+        <div class="slide__photo">
+         <img src="src/img/person2.png" alt="" />
+        </div>
+        <div class="slide__text">
+         <h5 class="slide__name">Khalessi</h5>
+         <p class="slide__comment">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea
+         </p>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
   <script
-   src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-   integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+   src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+   integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
    crossorigin="anonymous"
   ></script>
+  <script
+   type="text/javascript"
+   src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+  ></script>
+  <script>
+   $(".slider").slick({
+    dots: false,
+    infinite: true,
+    arrows: true,
+    autoplay: false,
+    slidesToShow: 1,
+    vertical: true,
+   });
+  </script>
  </body>
 </html>
