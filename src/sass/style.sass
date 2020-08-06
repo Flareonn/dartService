@@ -46,11 +46,18 @@ fieldset
 	margin:	0
 	border:	none
 	padding:	0
+
 // Контейнер сайта
 .container
 	max-width:	1200px
 	margin:	0px	auto
 	padding:	0px	15px
+		
+// "Экраны" сайта
+.service,	.benefits,	.team
+	padding-top:	100px
+	height:	100vh
+// Ссылки
 a
 	color:	$c-normal
 	transition:	all	.25s	linear
@@ -105,6 +112,7 @@ p.description
 @import	'stats'
 @import	'service'
 @import	'testimonials'
+@import	'team'
 /*
 	Примеры вариаций названий блоков
 	@import 'interface'
