@@ -1,6 +1,10 @@
 .stats
  display: flex
  justify-content: space-between
+ flex-wrap: wrap
+ &-wrap
+  display: flex
+  flex-basis: 50%
 .statistics
  display: flex
  align-items: center
@@ -16,14 +20,17 @@
   font-size: 20px
   font-weight: 700
   line-height: 25px
- &:first-child
-  background-color: #80d8ff
- &:nth-child(2)
-  background-color: #82b1ff
- &:nth-child(3)
-  background-color: #b388ff
- &:last-child
-  background-color: #ea80fc
+.stats-wrap
+ &:first-child>.statistics
+  &:first-child
+   background-color: #80d8ff
+  &:last-child
+   background-color: #82b1ff
+ &:last-child>.statistics
+  &:first-child
+   background-color: #b388ff
+  &:last-child
+   background-color: #ea80fc
   
   
   
