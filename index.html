@@ -8,13 +8,13 @@
   />
   <link rel="stylesheet" href="dist/css/style.css" />
   <link
-   href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,700;0,800;1,400;1,600&display=swap"
-   rel="stylesheet"
-  />
-  <link
    rel="stylesheet"
    type="text/css"
    href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+  />
+  <link
+   href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,700;0,800;1,400;1,600&display=swap"
+   rel="stylesheet"
   />
   <script
    src="https://kit.fontawesome.com/5cc5538366.js"
@@ -366,6 +366,62 @@
          </p>
         </div>
        </div>
+       <div class="slide">
+        <div class="slide__photo">
+         <img src="src/img/person1.png" alt="" />
+        </div>
+        <div class="slide__text">
+         <h5 class="slide__name">John Doe</h5>
+         <p class="slide__comment">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea
+         </p>
+        </div>
+       </div>
+       <div class="slide">
+        <div class="slide__photo">
+         <img src="src/img/person2.png" alt="" />
+        </div>
+        <div class="slide__text">
+         <h5 class="slide__name">Khalessi</h5>
+         <p class="slide__comment">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea
+         </p>
+        </div>
+       </div>
+       <div class="slide">
+        <div class="slide__photo">
+         <img src="src/img/person1.png" alt="" />
+        </div>
+        <div class="slide__text">
+         <h5 class="slide__name">John Doe</h5>
+         <p class="slide__comment">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea
+         </p>
+        </div>
+       </div>
+       <div class="slide">
+        <div class="slide__photo">
+         <img src="src/img/person2.png" alt="" />
+        </div>
+        <div class="slide__text">
+         <h5 class="slide__name">Khalessi</h5>
+         <p class="slide__comment">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea
+         </p>
+        </div>
+       </div>
       </div>
      </div>
     </div>
@@ -629,8 +685,8 @@
    </div>
   </footer>
   <script
-   src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-   integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+   src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+   integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
    crossorigin="anonymous"
   ></script>
   <script
@@ -638,21 +694,24 @@
    src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
   ></script>
   <script>
-   $(".slider").slick({
-    dots: false,
-    infinite: true,
-    arrows: true,
-    autoplay: false,
-    slidesToShow: 1,
-    vertical: true,
-    // responsive: [
-    //  {
-    //   breakpoint: 993,
-    //   settings: {
-    //    vertical: false,
-    //   },
-    //  },
-    // ],
+   $(document).ready(function () {
+    $(".slider").slick({
+     dots: false,
+     infinite: true,
+     arrows: true,
+     autoplay: false,
+     slidesToShow: 2,
+     vertical: true,
+     verticalSwiping: true,
+     responsive: [
+      {
+       breakpoint: 993,
+       settings: {
+        slidesToShow: 1,
+       },
+      },
+     ],
+    });
    });
    $(document).on("click", ".team-body__input", function (e) {
     $("#firstPersonWr").removeClass("team-body__wrapper_show");
