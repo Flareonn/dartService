@@ -160,26 +160,83 @@
 		display:	flex
 	.team
 		padding:	45px	0px
-	// 	height:	25%!important
+@media	(	max-width:	767px	)
+	.container
+		max-width:	none
+		.contacts-form
+			width:	75%
+			&__block
+				flex-direction:	column
+				&:last-child
+					flex-direction:	row
+			&__inner
+				width:	100%
+				&:first-child
+					flex-basis:	50%
+					margin:	0
+					margin-bottom:	20px
+		.footer>.container
+			flex-direction:	column
+			align-items:	center
+		.footer-wrap
+			&:first-child
+				width:	100%
+				justify-content:	center
+				&>.footer-inner
+					justify-content:	center
+					&:first-child
+						display:	flex
+						margin-bottom:	20px
+			&:last-child
+				width:	100%
+				align-items:	center
+				&>.footer-inner:first-child
+					margin:	20px	0px
+@media	(	max-width:	575px	)
+	.main-links
+		flex-direction:	column
+		&__button:first-child
+			margin:	0
+			margin-bottom:	10px
+	.benefits-header	>	p.description,	.service-header	>	p,	.team-header,	.contacts-header,	.container	.contacts-form
+		width:	100%
+	.benefits-grid__block,	.team-body__wrapper
+		width:	75%
+	.stats-wrap,	.footer>.container
+		flex-direction:	column
+	.header__nav>ul>li
+		margin:	0	10px
+	.slick-vertical	.slick-slide,	.slick-slider
+		flex-direction:	column
+	.slide__photo
+		justify-content:	center
+		display:	flex
+	.slick-next
+		bottom:	-10px
+	.team-body__avatars
+		flex-direction:	column
+		align-items:	center
+	.team-body__social>a:nth-child(even)
+		margin:	0px	10px
 	// Новое решение
- // @media ( max-width: 1200px )
-		// .container
-		// 	max-width:	970px
- // @media ( max-width: 992px )
+// @media ( max-width: 1200px )
 	// .container
-	// 	max-width:	750px
- // @media ( max-width: 767px )
-	// .container
-	// 	max-width:	none
- // @media ( max-width: 575px )
-	// Старые решения,
-	// брать только если конфликт с новыми
-	// @media (min-width: 1200px) and (max-width: 1799.98px) // col-xl
+	// 	max-width:	970px
+// @media ( max-width: 992px )
+// .container
+// 	max-width:	750px
+// @media ( max-width: 767px )
+// .container
+// 	max-width:	none
+// @media ( max-width: 575px )
+// Старые решения,
+// брать только если конфликт с новыми
+// @media (min-width: 1200px) and (max-width: 1799.98px) // col-xl
 
- // @media (min-width: 992px) and (max-width: 1199.98px) // col-lg
+// @media (min-width: 992px) and (max-width: 1199.98px) // col-lg
 
- // @media (min-width: 768px) and (max-width: 991.98px) // col-md
+// @media (min-width: 768px) and (max-width: 991.98px) // col-md
 
- // @media (min-width: 576px) and (max-width: 767.98px) // col-sm
+// @media (min-width: 576px) and (max-width: 767.98px) // col-sm
 
- // @media (max-width: 575.98px) // col
+// @media (max-width: 575.98px) // col

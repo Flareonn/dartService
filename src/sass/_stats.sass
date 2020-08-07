@@ -8,13 +8,21 @@
 .statistics
  display: flex
  align-items: center
+ flex-wrap: wrap
  justify-content: center
  padding: 45px 0
  flex: 1 0 25%
+ &-wrap
+  flex: 1
+  display: flex
+  margin-right: 10%
+  justify-content: flex-end
  &>b
-  margin-left: 23px
   color: #ffffff
  &__text
+  display: flex
+  justify-content: flex-start
+  flex: 1
   cursor: default
   user-select: none
   font-size: 20px
