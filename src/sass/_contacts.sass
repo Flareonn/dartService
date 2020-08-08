@@ -58,32 +58,8 @@ textarea.contacts-form__input
   align-items: center
  &__submit
   border: none
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15)
-  border-radius: 5px
-  background-color: #1de9b6
-  font-size: 16px
-  font-weight: 500
-  line-height: 30px
-  text-transform: uppercase
-  color: #ffffff
-  padding: 10px 42px
-  cursor: pointer
-		// background-color:	transparent
-		// border:	1px	solid	#d3e5eb
-		// transition:	.25s	all	linear
-		// flex-basis:	70%
-		// color:	#a0a9b6
-		// padding:	21px	25px
-		// flex-grow:	1
-		// &:focus	+	span
-		// 	display:	none
-		// &:valid	+	span
-		// 	display:	none
-		// &:hover	+	span
-		// 	transition:	.25s	all	linear
-		// 	color:	$c-active
-		// &:hover
-		// 	border-color:	$c-active
-		// 	transition:	.25s	all	linear
-		// &:focus
-		// 	outline:	none
+  @include thirdButton()
+   padding: 10px 42px
+   cursor: pointer
+  @include font(16px, $weight: 500)
+   line-height: 30px

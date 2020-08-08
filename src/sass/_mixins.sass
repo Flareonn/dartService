@@ -57,6 +57,48 @@
     margin-bottom: 0
  @content
 
+@mixin firstButton()
+ background-color: $c-active
+ padding: 22px 42px
+ box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15)
+ border-radius: 5px
+ text-transform: uppercase
+ &:hover
+  color: $c-active
+  background-color: $c-normal
+ &:active
+  background-color: darken($c-normal, 15%)
+ @content
+
+@mixin secondButton()
+ background-color: $c-normal
+ color: $c-active
+ padding: 22px 42px
+ box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15)
+ border-radius: 5px
+ text-transform: uppercase
+ &:hover
+  color: $c-normal
+  background-color: $c-active
+ &:active
+  background-color: darken($c-active, 15%)
+ @content
+ 
+@mixin thirdButton()
+ box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15)
+ border-radius: 5px
+ background-color: #1de9b6
+ padding: 22px 25px
+ text-transform: uppercase
+ transition: all .25s linear
+ &:hover
+  background-color: darken(#1de9b6, 15%)
+ &:active
+  background-color: darken(#1de9b6, 30%)
+ @content
+ 
+  
+
 // Для эксперементов
 // .test-layout
 //  display: flex

@@ -34,13 +34,8 @@
  display: flex
  justify-content: center
  &>a
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15)
-  border-radius: 5px
-  background-color: #1de9b6
-  padding: 22px 25px
-  text-decoration: none
-  font-size: 15px
-  font-weight: 700
-  text-transform: uppercase
-  &:hover
-   color: $c-normal
+  @include font($size: 15px, $weight: 700)
+   text-transform: uppercase
+   &:hover
+    color: $c-normal
+  @include thirdButton()

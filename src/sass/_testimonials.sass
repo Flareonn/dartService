@@ -22,16 +22,9 @@
   &:first-child
    display: block
  &__button
-  text-transform: uppercase
-  text-decoration: none
-  padding: 22px 25px
-  background-color: $c-active
-  font-weight: 700
-  font-size: 15px
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15)
-  border-radius: 5px
-  &:hover
-   color: $c-normal
+  @include firstButton()
+   padding: 22px 25px
+  @include font(15px, $weight: 700)
 
 
 // Слайдер
