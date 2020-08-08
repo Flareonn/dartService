@@ -1,32 +1,8 @@
-$c-normal: #ffffff
-$c-active: #061e37
-$c-sec: #b0bec5
+@import	'variables'
+@import	'mixins'
 
-::-webkit-scrollbar-button
-	background-image:	url('')
-	background-repeat:	no-repeat
-	width:	5px
-	height:	0px
+@include	custom-scroll($c-sec,	$c-active)	//	1.	Цвет	скролла	2.	Цвет	скролла	при	наведении
 
-::-webkit-scrollbar-track
-	background-color:	transparent
-
-::-webkit-scrollbar-thumb
-	-webkit-border-radius:	0px
-	border-radius:	0px
-	background-color:	$c-sec
-
-::-webkit-scrollbar-thumb:hover
-	background-color:	$c-active
-
-::-webkit-resizer
-	background-image:	url('')
-	background-repeat:	no-repeat
-	width:	5px
-	height:	0px
-
-::-webkit-scrollbar
-	width:	5px
 html
 	scroll-behavior:	smooth
 img
@@ -66,21 +42,12 @@ a
 
 // Стандартный заголовок, подзаголовок и описание
 h2.title
-	font-size:	45px
-	font-weight:	600
-	color:	$c-active
-	text-align:	center
+	@include	font(45px,	$c-active,	600,	center)
 h3.subtitle
-	font-size:	25px
-	font-weight:	500
-	color:	$c-sec
-	text-align:	center
+	@include	font(25px,	$c-sec,	500,	center)
 p.description
-	font-size:	15px
-	font-weight:	400
-	line-height:	25px
-	color:	$c-sec
-	text-align:	center
+	@include	font(15px,	$c-sec,	400,	center)
+		line-height: 25px
 
 // Квадрат на иконке видео
 .icon-square

@@ -1,11 +1,11 @@
 .header
- color: $c-normal
- padding-top: 50px
- padding-bottom: 165px
- justify-content: space-between
- align-items: center
- display: flex
- width: 100%
+ @include font($color: $c-normal)
+  padding-top: 50px
+  padding-bottom: 165px
+  justify-content: space-between
+  align-items: center
+  display: flex
+  width: 100%
  // Меню навигации
  &__nav>ul
   display: flex
@@ -17,10 +17,9 @@
     margin: 0
    // стилизация ссылок
    &>a
-    font-size: 15px
-    font-weight: 600
-    line-height: 25px
-    text-decoration: none
+    @include font(15px, $c-normal, 600)
+     line-height: 25px
+     text-decoration: none
  // Лого
  &__logo
   text-decoration: none
@@ -29,9 +28,9 @@
   &>img
    margin-right: 10px
   &>p
-   font-size: 15px
-   line-height: 17.5px
-   text-transform: uppercase
+   @include font(15px, $c-normal)
+    line-height: 17.5px
+    text-transform: uppercase
   &:hover
    color: $c-normal
  // Кнопка входа
@@ -43,10 +42,10 @@
   align-items: center
   max-height: 25px
   &>a
-   padding: 6px 20px
-   line-height: 25px
-   text-decoration: none
-   font-size: 14px
+   @include font($color: $c-normal)
+    padding: 6px 20px
+    line-height: 25px
+    text-decoration: none
   &:hover
    border-color: $c-active
    transition: all .25s linear
