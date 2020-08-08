@@ -1,5 +1,5 @@
 .header
- @include font($color: $c-normal)
+ @include font()
   padding-top: 50px
   padding-bottom: 165px
   justify-content: space-between
@@ -17,7 +17,7 @@
     margin: 0
    // стилизация ссылок
    &>a
-    @include font(15px, $c-normal, 600)
+    @include font(15px, $weight: 600)
      line-height: 25px
      text-decoration: none
  // Лого
@@ -28,7 +28,7 @@
   &>img
    margin-right: 10px
   &>p
-   @include font(15px, $c-normal)
+   @include font(15px)
     line-height: 17.5px
     text-transform: uppercase
   &:hover
@@ -42,7 +42,7 @@
   align-items: center
   max-height: 25px
   &>a
-   @include font($color: $c-normal)
+   @include font()
     padding: 6px 20px
     line-height: 25px
     text-decoration: none

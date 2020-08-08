@@ -1,4 +1,4 @@
-@mixin custom-scroll($color, $color-hover)
+@mixin custom-scroll($color, $color-hover) // Кастомный скролл
  ::-webkit-scrollbar-button
   background-image: url('')
   background-repeat: no-repeat
@@ -25,8 +25,46 @@
  ::-webkit-scrollbar
   width: 5px
 
-@mixin font($size:14px, $color:#000, $weight:400, $align:left)
+@mixin font($size:14px, $color: $c-normal, $weight:400, $align:left) // Шрифтов
  font-size: $size
  font-weight: $weight
- @content text-align: $align
- @content color: $color
+ text-align: $align
+ color: $color
+ @content
+
+@mixin layout($col, $m: 0%, $pos: none) // Разметка
+ // Родительский элемент
+ display: flex
+ flex-wrap: wrap
+ @if $pos==center // Выровнять по центру
+  margin: 0 auto
+  width: 50%
+ &>* // Дочерние элементы
+  display: flex
+  flex-basis: ((100% - (($col - 1) * $m )) / $col)
+  margin: 0 $m $m 0
+  &:nth-child(#{$col}n) // Удаление отступа у последнего элемента
+   margin-right: 0
+  @if $col >= 2 // Если это последний элемент в сетке, убрать отступ вниз
+   @while $col != 0
+    &:nth-last-child(#{$col})
+     margin-bottom: 0
+    $col: $col - 1
+  @else
+   &:first-child
+    margin-bottom: $m
+   &:last-child
+    margin-bottom: 0
+ @content
+
+// Для эксперементов
+// .test-layout
+//  display: flex
+//  @include font($align: center) 
+//  @include layout($col: 2, $m: 5%)
+//  &>div
+//   height: 50px
+//   background-color: #000
+//   text-align: center
+//   justify-content: center
+//   align-items: center

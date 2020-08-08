@@ -2,9 +2,9 @@
  >.container
   height: 100%
  &-grid
-  display: flex
-  align-items: center
-  height: 100%
+  @include layout(2, 2.5%)
+   align-items: center
+   height: 100%
  &-block
   &__header
    margin-bottom: 78px
@@ -20,12 +20,7 @@
    color: #fff
    text-align: left
   &:first-child
-   flex: 1 0 40%
-   margin-right: 5%
-  &:last-child
-   flex: 1 0 55%
-   display: flex
-   height: 100%
+   display: block
  &__button
   text-transform: uppercase
   text-decoration: none
@@ -82,6 +77,8 @@
 .slick-vertical .slick-slide, .slick-slider
  display: flex!important
  border: none!important
+
+.slick-track
 
 .slick-slide
  margin-bottom: 30px

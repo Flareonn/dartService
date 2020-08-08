@@ -96,6 +96,8 @@
 		width:	calc(	75vw	-	3.75px)
 	.container
 		max-width:	970px
+	.testimonials-grid
+		flex-wrap:	nowrap
 @media	(	max-width:	992px	)
 	.container
 		max-width:	750px
@@ -164,14 +166,13 @@
 		width:	75%
 		&__block
 			flex-direction:	column
+			@include	layout($col:	1,	$m:	5%)
 			&:last-child
 				flex-direction:	row
+				&>input
+					justify-content:	center
 		&__inner
 			width:	100%
-			&:first-child
-				flex-basis:	50%
-				margin:	0
-				margin-bottom:	20px
 	.footer>.container
 		flex-direction:	column
 		align-items:	center

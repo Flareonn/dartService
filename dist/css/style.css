@@ -103,10 +103,9 @@ h3.subtitle {
 p.description {
   font-size: 15px;
   font-weight: 400;
-  line-height: 25px;
   text-align: center;
-  line-height: 25px;
   color: #b0bec5;
+  line-height: 25px;
 }
 
 .icon-square {
@@ -153,6 +152,8 @@ p.description {
 .header {
   font-size: 14px;
   font-weight: 400;
+  text-align: left;
+  color: #ffffff;
   padding-top: 50px;
   padding-bottom: 165px;
   -webkit-box-pack: justify;
@@ -165,14 +166,6 @@ p.description {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  text-align: left;
-  padding-top: 50px;
-  padding-bottom: 165px;
-  justify-content: space-between;
-  align-items: center;
-  display: flex;
-  width: 100%;
-  color: #ffffff;
 }
 
 .header__nav > ul {
@@ -195,12 +188,10 @@ p.description {
 .header__nav > ul > li > a {
   font-size: 15px;
   font-weight: 600;
-  line-height: 25px;
-  text-decoration: none;
   text-align: left;
+  color: #ffffff;
   line-height: 25px;
   text-decoration: none;
-  color: #ffffff;
 }
 
 .header__logo {
@@ -220,12 +211,10 @@ p.description {
 .header__logo > p {
   font-size: 15px;
   font-weight: 400;
-  line-height: 17.5px;
-  text-transform: uppercase;
   text-align: left;
+  color: #ffffff;
   line-height: 17.5px;
   text-transform: uppercase;
-  color: #ffffff;
 }
 
 .header__logo:hover {
@@ -251,14 +240,11 @@ p.description {
 .header__login > a {
   font-size: 14px;
   font-weight: 400;
-  padding: 6px 20px;
-  line-height: 25px;
-  text-decoration: none;
   text-align: left;
+  color: #ffffff;
   padding: 6px 20px;
   line-height: 25px;
   text-decoration: none;
-  color: #ffffff;
 }
 
 .header__login:hover {
@@ -296,25 +282,20 @@ p.description {
 .main__title {
   font-size: 55px;
   font-weight: bold;
-  line-height: 65px;
-  text-transform: uppercase;
-  margin-bottom: 28px;
   text-align: left;
+  color: #ffffff;
   line-height: 65px;
   text-transform: uppercase;
   margin-bottom: 28px;
-  color: #ffffff;
 }
 
 .main__subtitle {
   font-size: 18px;
   font-weight: 400;
-  margin-bottom: 38px;
-  line-height: 35px;
   text-align: left;
+  color: #ffffff;
   margin-bottom: 38px;
   line-height: 35px;
-  color: #ffffff;
 }
 
 .main-links {
@@ -554,22 +535,35 @@ p.description {
 }
 
 .stats {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
-.stats-wrap {
+.stats > * {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
+  margin: 0 0 0 0;
+}
+
+.stats > *:nth-child(2n) {
+  margin-right: 0;
+}
+
+.stats > *:nth-last-child(2) {
+  margin-bottom: 0;
+}
+
+.stats > *:nth-last-child(1) {
+  margin-bottom: 0;
 }
 
 .statistics {
@@ -778,10 +772,33 @@ p.description {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
+}
+
+.testimonials-grid > * {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 48.75%;
+      flex-basis: 48.75%;
+  margin: 0 2.5% 2.5% 0;
+}
+
+.testimonials-grid > *:nth-child(2n) {
+  margin-right: 0;
+}
+
+.testimonials-grid > *:nth-last-child(2) {
+  margin-bottom: 0;
+}
+
+.testimonials-grid > *:nth-last-child(1) {
+  margin-bottom: 0;
 }
 
 .testimonials-block__header {
@@ -806,20 +823,7 @@ p.description {
 }
 
 .testimonials-block:first-child {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 40%;
-          flex: 1 0 40%;
-  margin-right: 5%;
-}
-
-.testimonials-block:last-child {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 55%;
-          flex: 1 0 55%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
+  display: block;
 }
 
 .testimonials__button {
@@ -1134,6 +1138,10 @@ textarea.contacts-form__input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 auto;
+  width: 50%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1141,8 +1149,28 @@ textarea.contacts-form__input {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 50%;
-  margin: 50px auto 0px auto;
+  margin-top: 50px;
+}
+
+.contacts-form > * {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  margin: 0 5% 5% 0;
+}
+
+.contacts-form > *:nth-child(1n) {
+  margin-right: 0;
+}
+
+.contacts-form > *:first-child {
+  margin-bottom: 5%;
+}
+
+.contacts-form > *:last-child {
+  margin-bottom: 0;
 }
 
 .contacts-form__input {
@@ -1182,8 +1210,25 @@ textarea.contacts-form__input {
           align-items: center;
 }
 
-.contacts-form__block:nth-child(2) {
-  margin: 20px 0px;
+.contacts-form__block > * {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 47.5%;
+      flex-basis: 47.5%;
+  margin: 0 5% 5% 0;
+}
+
+.contacts-form__block > *:nth-child(2n) {
+  margin-right: 0;
+}
+
+.contacts-form__block > *:nth-last-child(2) {
+  margin-bottom: 0;
+}
+
+.contacts-form__block > *:nth-last-child(1) {
+  margin-bottom: 0;
 }
 
 .contacts-form__block:nth-child(3) {
@@ -1194,20 +1239,6 @@ textarea.contacts-form__input {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   margin-right: 0;
-}
-
-.contacts-form__inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
-}
-
-.contacts-form__inner:first-child {
-  -ms-flex-preferred-size: 47.5%;
-      flex-basis: 47.5%;
-  margin-right: 2.5%;
 }
 
 .contacts-form__label {
@@ -1493,6 +1524,10 @@ ul.footer-inner > li > a:hover {
   .container {
     max-width: 970px;
   }
+  .testimonials-grid {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
 }
 
 @media (max-width: 992px) {
@@ -1621,6 +1656,28 @@ ul.footer-inner > li > a:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .contacts-form__block > * {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin: 0 5% 5% 0;
+  }
+  .contacts-form__block > *:nth-child(1n) {
+    margin-right: 0;
+  }
+  .contacts-form__block > *:first-child {
+    margin-bottom: 5%;
+  }
+  .contacts-form__block > *:last-child {
+    margin-bottom: 0;
   }
   .contacts-form__block:last-child {
     -webkit-box-orient: horizontal;
@@ -1628,14 +1685,13 @@ ul.footer-inner > li > a:hover {
         -ms-flex-direction: row;
             flex-direction: row;
   }
+  .contacts-form__block:last-child > input {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
   .contacts-form__inner {
     width: 100%;
-  }
-  .contacts-form__inner:first-child {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
-    margin: 0;
-    margin-bottom: 20px;
   }
   .footer > .container {
     -webkit-box-orient: vertical;
@@ -1734,6 +1790,12 @@ ul.footer-inner > li > a:hover {
 /*
 	Примеры вариаций названий блоков
 	@import 'interface'
+	@import	'benefits'
+	@import	'stats'
+	@import	'service'
+	@import	'testimonials'
+	@import	'team'
+	@import	'footer'
 	@import 'header'
 	@import 'main'
 	@import 'features'
