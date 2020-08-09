@@ -1,88 +1,112 @@
-@import	'variables'
-@import	'mixins'
+@import 'variables'
+@import 'mixins'
 
-@include	custom-scroll($c-sec,	$c-active)	//	1.	Цвет	скролла	2.	Цвет	скролла	при	наведении
+::-webkit-scrollbar-button
+ background-image: url('')
+ background-repeat: no-repeat
+ width: 5px
+ height: 0px
+
+::-webkit-scrollbar-track
+ background-color: transparent
+
+::-webkit-scrollbar-thumb
+ -webkit-border-radius: 0px
+ border-radius: 0px
+ background-color: $c-sec
+
+::-webkit-scrollbar-thumb:hover
+ background-color: $c-active
+
+::-webkit-resizer
+ background-image: url('')
+ background-repeat: no-repeat
+ width: 5px
+ height: 0px
+
+::-webkit-scrollbar
+ width: 5px
 
 html
-	scroll-behavior:	smooth
+ scroll-behavior: smooth
 img
-	max-width:	100%
-	user-select:	none
+ max-width: 100%
+ user-select: none
 input,	body, button
-	font-family:	'Raleway',	sans-serif
+ font-family: 'Raleway', sans-serif
 body
-	margin:	0
-	padding:	0
-	min-height:	100%
+ margin: 0
+ padding: 0
+ min-height: 100%
 p,	h1,	h2,	h3,	h4,	h5, ul
-	margin:	0
-	padding:	0
+ margin: 0
+ padding: 0
 fieldset
-	margin:	0
-	border:	none
-	padding:	0
+ margin: 0
+ border: none
+ padding: 0
 
 // Контейнер сайта
 .container
-	max-width:	1200px
-	margin:	0px	auto
-	padding:	0px	15px
+ max-width: 1200px
+ margin: 0px auto
+ padding: 0px 15px
 		
 // "Экраны" сайта
-.service,	.benefits,	.team
-	padding-top:	100px
-	min-height:	100vh
+.service, .benefits, .team
+ padding-top: 100px
+ min-height: 100vh
 // Ссылки
 a
-	color:	$c-normal
-	text-decoration:	none
-	transition:	all	.25s	linear
-	&:hover
-		color:	$c-active
-		transition:	all	.25s	linear
+ color: $c-normal
+ text-decoration: none
+ transition: all .25s linear
+ &:hover
+  color: $c-active
+  transition: all .25s linear
 
 // Стандартный заголовок, подзаголовок и описание
 h2.title
-	@include	font(45px,	$c-active,	600,	center)
+ +font(45px, $c-active, 600, center)
 h3.subtitle
-	@include	font(25px,	$c-sec,	500,	center)
+ +font(25px, $c-sec, 500, center)
 p.description
-	@include	font(15px,	$c-sec,	400,	center)
-		line-height:	25px
+ +font(15px, $c-sec, 400, center)
+ line-height: 25px
 
 // Квадрат на иконке видео
 .icon-square
-	width:	60px
-	height:	60px
-	justify-content:	center
-	align-items:	center
-	background-color:	$c-active
-	display:	flex
-	box-shadow:	0	5px	10px	rgba(0,	0,	0,	0.2)
-	border-radius:	5px
-	margin-bottom:	22px
-	transition:	all	.25s	linear
-	&>i
-		color:	$c-normal
+ width: 60px
+ height: 60px
+ justify-content: center
+ align-items: center
+ background-color: $c-active
+ display: flex
+ box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2)
+ border-radius: 5px
+ margin-bottom: 22px
+ transition: all .25s linear
+ &>i
+  color: $c-normal
 .ellipse
-	width:	60px
-	height:	60px
-	border-radius:	50%
-	display:	flex
-	align-items:	center
-	justify-content:	center
-	background-color:	#ffffff
+ width: 60px
+ height: 60px
+ border-radius: 50%
+ display: flex
+ align-items: center
+ justify-content: center
+ background-color: #ffffff
 
-@import	'header'
-@import	'main'
-@import	'benefits'
-@import	'stats'
-@import	'service'
-@import	'testimonials'
-@import	'team'
-@import	'contacts'
-@import	'footer'
-@import	'media'
+@import 'header'
+@import 'main'
+@import 'benefits'
+@import 'stats'
+@import 'service'
+@import 'testimonials'
+@import 'team'
+@import 'contacts'
+@import 'footer'
+@import 'media'
 /*
 	Примеры вариаций названий блоков
 	@import 'interface'

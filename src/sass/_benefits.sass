@@ -34,8 +34,12 @@
  display: flex
  justify-content: center
  &>a
+  @extend %_button
+  +uButton($c-normal, #1de9b6, 22px 25px)
+  &:hover
+   color: $c-normal
+   background-color: darken(#1de9b6, 15%)
   @include font($size: 15px, $weight: 700)
    text-transform: uppercase
    &:hover
     color: $c-normal
-  @include thirdButton()

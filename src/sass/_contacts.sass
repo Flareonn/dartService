@@ -58,8 +58,10 @@ textarea.contacts-form__input
   align-items: center
  &__submit
   border: none
-  @include thirdButton()
-   padding: 10px 42px
-   cursor: pointer
+  @extend %_button
+  +uButton($c-normal, #1de9b6, 10px 42px)
+  &:hover
+   color: $c-normal
+   background-color: darken(#1de9b6, 15%)
   @include font(16px, $weight: 500)
    line-height: 30px

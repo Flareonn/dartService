@@ -22,9 +22,9 @@
   &:first-child
    display: block
  &__button
-  @include firstButton()
-   padding: 22px 25px
-  @include font(15px, $weight: 700)
+  +font(15px, $weight: 700)
+  +uButton($c-normal, $c-active, 22px 42px)
+  @extend %_button
 
 
 // Слайдер
