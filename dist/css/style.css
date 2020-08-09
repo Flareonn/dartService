@@ -1092,12 +1092,6 @@ p.description {
   opacity: 1;
 }
 
-.team-body__input:checked + .team-body__person > .block-test {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .team-body__input {
   display: none;
 }
